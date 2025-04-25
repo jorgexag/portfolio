@@ -5,21 +5,18 @@
     box-sizing: border-box;
 }
 
+/* Variables */
 :root {
     --ff: "Atkinson Hyperlegible", sans-serif;
     --p: 1.25rem/0.75em var(--ff);
     --color1: hsl(154, 78%, 14%);
-    --color2: hsl(155, 17%, 30%);
+    --color2: hsl(156, 89%, 33%);
     --colorw: hsl(0, 0%, 100%);
 }
 
+/* Global  */
 body {
     margin: 4em;
-}
-
-a {
-    font: var(--p);
-    margin: 0.5em auto;
 }
 
 img {
@@ -30,6 +27,11 @@ img {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     column-gap: 10px;
+    row-gap: 25px;
+}
+
+.grid-item {
+    text-decoration: none;
     color: var(--colorw);
 }
 
@@ -44,6 +46,12 @@ img {
 
 .card:hover {
     background-color: var(--color2);
+}
+
+
+.card-label {
+    font: var(--p);
+    margin: 0.5em auto;
 }
 
 @media (max-width: 1200px) {
