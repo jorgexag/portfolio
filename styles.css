@@ -20,7 +20,7 @@
 body {
     margin: 2em 4em;
     background: var(--color1);
-    background-image: url("/img/noise-light.png");
+    background-image: url("/portfolio/img/noise-light.png");
     text-wrap: balance;
     transition: background-color 200ms ease, color 200ms ease;
 }
@@ -73,15 +73,16 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
     column-gap: 10px;
     row-gap: 60px;
-    /* grid-auto-rows: min-content; */
+    grid-auto-rows: min-content;
 }
 
 .grid-item {
     text-decoration: none;
     color: var(--colorb);
+
 }
 
 .card {
@@ -114,7 +115,7 @@ p {
     transition: opacity 200ms ease;
     border-radius: 12px;
     background-color: var(--color1);
-    background-image: url("/img/noise-light.png");
+    background-image: url("/portfolio/img/noise-light.png");
 }
 
 .card-overlay:hover {
