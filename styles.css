@@ -143,4 +143,8 @@ p {
         margin-left: 2em;
         width: 1.5em;
     }
+
+    .card-overlay {
+        opacity: 0;
+    }
 }
