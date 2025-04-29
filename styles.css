@@ -8,17 +8,31 @@
 /* Variables */
 :root {
     --ff: "Atkinson Hyperlegible", sans-serif;
+    --ff2: "Inter";
     --p: 1.25rem/0.75em var(--ff);
-    --h1: 2.5rem/1.5em var(--ff);
-    --color1: hsl(154, 78%, 14%);
-    --color2: hsl(156, 89%, 83%);
-    --colorw: hsl(0, 0%, 100%);
+    --h1: 3rem/1.5em var(--ff2);
+    --colorb: hsl(195, 14%, 5%);
+    --color1: hsl(203, 75%, 90%);
+    --color2: hsl(200, 86%, 51%);
 }
 
 /* Global  */
 body {
-    margin: 4em;
-    background-color: var(--color2);
+    margin: 2em 4em;
+    background: var(--color1);
+    background-image: url("/img/noise-light.png");
+    text-wrap: balance;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+body.dark-mode {
+    --colorb: hsl(195, 15%, 95%);
+    --color1: hsl(203, 76%, 10%);
+}
+
+body.light-mode {
+    --colorb: hsl(195, 14%, 5%);
+    --color1: hsl(203, 75%, 90%);
 }
 
 img {
@@ -28,50 +42,66 @@ img {
 
 h1 {
     font: var(--h1);
+    font-weight: bold;
+    font-style: italic;
+}
+
+p {
+    font: var(--p);
+    line-height: 3em;
 }
 
 .container-title {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    color: var(--colorb);
+    padding: 1.2rem;
+}
+
+.icon {
+    width: 2em;
+    fill: var(--colorb);
+    cursor: pointer;
+}
+
+#sun {
+    width: 2.5em;
+    display: none;
 }
 
 .container {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     column-gap: 10px;
-    row-gap: 25px;
+    row-gap: 60px;
+    /* grid-auto-rows: min-content; */
 }
 
 .grid-item {
     text-decoration: none;
-    color: var(--colorw);
+    color: var(--colorb);
 }
 
 .card {
     position: relative;
-    background-color: var(--color1);
     border-radius: 12px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    transition: background-color 0.3s ease;
 }
 
 .card-image {
     position: relative;
+    border: 1px dashed var(--color2) !important;
+    border-radius: 12px;
 }
 
 .card-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 12px;
-}
-
-.card-label {
-    font: var(--p);
-    margin: 0.5em auto;
 }
 
 .card-overlay {
@@ -80,15 +110,17 @@ h1 {
     right: 0;
     left: 0;
     bottom: 0;
-    height: 98.5%;
-    background-color: var(--colorw);
+    height: 100%;
     transition: opacity 200ms ease;
     border-radius: 12px;
+    background-color: var(--color1);
+    background-image: url("/img/noise-light.png");
 }
 
 .card-overlay:hover {
     opacity: 0;
 }
+
 
 @media (max-width: 1200px) {
     .container {
@@ -101,5 +133,14 @@ h1 {
     .container {
         grid-template-columns: 100%;
         row-gap: 20px;
+    }
+
+    :root {
+        --h1: 2.5rem/1.5em var(--ff2);
+    }
+
+    .icon {
+        margin-left: 2em;
+        width: 1.5em;
     }
 }
