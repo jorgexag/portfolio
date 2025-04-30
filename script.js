@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sunIcon = document.getElementById('sun');
     const moonIcon = document.getElementById('moon');
+    const lImage = document.getElementById('l-image');
+    const dImage = document.getElementById('d-image');
     const body = document.body;
 
     // Function to set the theme based on the preference
@@ -10,11 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('light-mode');
             sunIcon.style.display = 'block';
             moonIcon.style.display = 'none';
+            lImage.style.display = 'none';
+            dImage.style.display = 'block';
         } else {
             body.classList.add('light-mode');
             body.classList.remove('dark-mode');
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
+            lImage.style.display = 'block';
+            dImage.style.display = 'none';
         }
     };
 
