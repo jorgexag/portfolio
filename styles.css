@@ -112,7 +112,6 @@ p {
     right: 0;
     left: 0;
     bottom: 0;
-    height: 100%;
     transition: opacity 200ms ease;
     border-radius: 12px;
     background-color: var(--color1);
@@ -148,5 +147,11 @@ p {
 
     .card-overlay {
         opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --h1: 2rem/1.25em var(--ff2);
     }
 }
