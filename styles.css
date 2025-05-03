@@ -48,7 +48,7 @@ h1 {
 
 p {
     font: var(--p);
-    line-height: 3em;
+    line-height: 2em;
 }
 
 .container-title {
@@ -122,18 +122,21 @@ p {
     opacity: 0;
 }
 
+.card-label {
+    /* margin-top: -10px; */
+}
 
 @media (max-width: 1200px) {
     .container {
         grid-template-columns: 50% 50%;
-        row-gap: 25px;
+        row-gap: 12px;
     }
 }
 
 @media (max-width: 800px) {
     .container {
         grid-template-columns: 100%;
-        row-gap: 20px;
+        row-gap: 10px;
     }
 
     :root {
